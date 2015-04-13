@@ -11,7 +11,6 @@ github_username:  baasdesign
 markdown: kramdown
 
 prose:
-  rooturl: ''
   siteurl: 'http://baasdesign.github.io/'
   ignore:
     - _config.yml
