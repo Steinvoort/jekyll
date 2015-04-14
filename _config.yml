@@ -9,35 +9,3 @@ github_username:  baasdesign
 
 # Build settings
 markdown: kramdown
-
-prose:
-  siteurl: 'http://baasdesign.github.io/'
-  ignore:
-    - _config.yml
-    - /_layouts
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-    _posts/static:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "page"
-      - name: "permalink"
-        field:
-          element: "text"
-          label: "Permalink"
-          value: ""
