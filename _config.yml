@@ -9,3 +9,19 @@ github_username:  ipublications
 
 # Build settings #
 markdown: kramdown
+
+prose:
+  siteurl: 'http://prose.github.io/jekyll/'
+  relativeLinks: 'http://prose.github.io/jekyll/links.jsonp'
+  media: 'assets/images/'
+  ignore:
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /_data
+    - /_plugins
+    - /_sass
+    - /css
+    - .gitignore
+    - Gemfile
+    - Gemfile.lock
