@@ -2,8 +2,14 @@
 title: iPublications Jekyll Template
 email: info@ipublications.net
 description: iPublications Jekyll Template
-baseurl: "/jekyll" # the subpath of your site, e.g. /blog/
+# for live
+baseurl: "/jekyll"
 siteurl: "http://baasdesign.github.io/"
+
+#for local
+# baseurl: ""
+# siteurl: "localhost:4000"
+
 twitter_username: ipublications
 github_username:  ipublications
 
