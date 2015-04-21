@@ -6,13 +6,13 @@ layout: default
     <div class="paginator">
         {% if page.previous.layout == "portfolio" %}
             {% if page.previous.url %}
-                <a class="pull-left" href="{{page.previous.url}}"><small><i class="fa fa-arrow-left"></i> &nbsp; {{page.previous.title}}</small></a>
+                <a class="pull-left" href="{{ page.previous.url | prepend: site.baseurl }}"><small><i class="fa fa-arrow-left"></i> &nbsp; {{page.previous.title}}</small></a>
             {% endif %}
         {% endif %}
 
         {% if page.next.layout == "portfolio" %}
             {% if page.next.url %}
-                <a class="pull-right" href="{{page.next.url}}"><small>{{page.next.title}} &nbsp; <i class="fa fa-arrow-right"></i></small></a>
+                <a class="pull-right" href="{{ page.next.url | prepend: site.baseurl }}"><small>{{page.next.title}} &nbsp; <i class="fa fa-arrow-right"></i></small></a>
             {% endif %}
         {% endif %}
     </div>
