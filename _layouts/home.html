@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="container-fluid slider">
+    <div class="container text-center">
+        <h1>{{ page.sitetitel }}</h1>
+        <h3>{{ page.siteondertitel }}</h3>
+        <span>&#8212 "{{ page.sitequote }}"</span>
+    </div>
+</div>
+
+<div class="container">
+    <button class="btn btn-primary btn-lg center-block header-btn">{{ page.sitebutton }}</button>
+</div>
+<br>
+<div class="container">
+    {% if page.extension != 'html' %}
+        <h3 class="title">{{ page.title }}</h3>
+    {% endif %}
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+</div>
+
+<div class="container text-center recent-work-header">
+    <span class="center-block">&#8212 Dit zijn mijn katten &#8212</span>
+</div>
+<div class="container-fluid port-items">
+    <div class="row gradient">
+        {% for post in site.categories.projects reversed %}
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid">
+                <a href="{{ post.url }}" class="item-link">
+                    <span class="item-image" style="background-image: url('{{ baseurl }}/assets/images/{{ post.image.first }}')"></span>
+                    <span class="item-texts">
+                        <span class="item-title">{{ post.title }}</span>
+                        <span class="item-sub">{{ post.subtag }}</span>
+                    </span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+

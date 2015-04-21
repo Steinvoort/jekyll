@@ -1,0 +1,26 @@
+<header>
+    <nav class="ipub-navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="site-title pull-left brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+                        <!-- Close & open button -->
+                        <button type="button" class="tcon tcon-menu--xcross hidden-lg hidden-md transform-icon" aria-label="toggle menu">
+                            <span class="tcon-menu__lines" aria-hidden="true"></span>
+                            <span class="tcon-visuallyhidden">toggle menu</span>
+                        </button>
+
+                        <ul class="navigation hidden-sm hidden-xs">
+                            {% for page in site.pages %}
+                                {% if page.title %}
+                                    <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            <li><a href="" id="open-modal-tag"><i class="fa fa-paper-plane"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </nav>
+</header>

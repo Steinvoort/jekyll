@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="container">
+
+    {% if page.extension != 'html' %}
+        <h3 class="title">{{ page.title }}</h3>
+    {% endif %}
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+
+    {% contentblock article %}
+
+</div>

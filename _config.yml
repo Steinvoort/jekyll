@@ -1,0 +1,13 @@
+# Site settings
+title: iPublications Jekyll Template
+email: info@ipublications.net
+description: iPublications Jekyll Template
+baseurl: "" # the subpath of your site, e.g. /blog/
+siteurl: "localhost:4000"
+twitter_username: ipublications
+github_username:  ipublications
+
+# Build settings
+markdown: kramdown
+
+gems: [mini_magick, jekyll-contentblocks]
