@@ -17,6 +17,7 @@ prose:
   ignore:
     - _config.yml
     - /_layouts
+    - /assets/js
     - /_includes
     - /_data
     - /_plugins
