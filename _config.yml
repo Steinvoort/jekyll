@@ -7,7 +7,7 @@ baseurl: "http://baasdesign.github.io/" # the subpath of your site, e.g. /blog/
 twitter_username: ipublications
 github_username:  ipublications
 
-# Build settings
+# Build settings #
 markdown: kramdown
 
 gems: [mini_magick, jekyll-contentblocks]
