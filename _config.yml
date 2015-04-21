@@ -9,5 +9,3 @@ github_username:  ipublications
 
 # Build settings #
 markdown: kramdown
-
-gems: [mini_magick, jekyll-contentblocks]
