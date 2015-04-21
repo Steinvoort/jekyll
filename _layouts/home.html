@@ -31,7 +31,7 @@ layout: default
     <div class="row gradient">
         {% for post in site.categories.projects reversed %}
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid">
-                <a href="{{ post.url }}" class="item-link">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="item-link">
                     <span class="item-image" style="background-image: url('{{ site.baseurl }}/assets/images/{{ post.image.first }}')"></span>
                     <span class="item-texts">
                         <span class="item-title">{{ post.title }}</span>
