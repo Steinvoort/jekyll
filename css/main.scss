@@ -175,7 +175,6 @@ header
             padding: 0;
 
             list-style: none;
-            will-change: transform;
             @media (max-width: 991px)
             {
                 display: block !important;
@@ -194,11 +193,11 @@ header
 
                 opacity: 0;
                 background: lighten($mediumgray, 5%);
-                will-change: transform, max-height;
+                will-change: transform, max-height, opacity;
                 &.open
                 {
-                    -webkit-transform: rotateX(0deg) translateY(0px);
-                            transform: rotateX(0deg) translateY(0px);
+                    -webkit-transform: rotateX(0deg) translateY(0px) translateZ(0px);
+                            transform: rotateX(0deg) translateY(0px) translateZ(0px);
 
                     opacity: 1;
                 }
