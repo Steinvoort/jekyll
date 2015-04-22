@@ -131,9 +131,12 @@ header
     margin-bottom: 0;
     nav.ipub-navbar
     {
+        /* position absolute for performance */
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
+        /* end position */
         overflow: hidden;
 
         width: 100%;
