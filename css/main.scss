@@ -117,7 +117,6 @@ header {
         a.brand {
             display: block;
             padding: 36px 0;
-            -webkit-transition: $transition;
             transition: $transition;
             color: $primary;
             &:hover {
@@ -141,7 +140,7 @@ header {
                 overflow: hidden;
                 max-height: 0;
                 margin: 0 -100%;
-                -webkit-transition: -webkit-transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
+                transition: -webkit-transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
                 transition: transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
 
                 -webkit-transform: translate3d(-30px, -30px, 0px);
@@ -169,7 +168,6 @@ header {
                     display: block;
                     margin: 0;
                     padding: 40px 25px;
-                    -webkit-transition: $transition;
                     transition: $transition;
                     color: $primary;
                     @media (max-width: 991px) {
@@ -250,7 +248,6 @@ header {
 .header-btn {
     margin-top: -58px;
     padding: 17px 25px 16px 25px;
-    -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out;
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -300,8 +297,7 @@ header {
                 display: block;
                 width: 100%;
                 height: 100%;
-                transition: transform 4s ease-in-out, -webkit-filter .2s ease-in-out, opacity .2s ease-in-out;
-                -webkit-transition: -webkit-transform 4s ease-in-out, -webkit-filter .2s ease-in-out, opacity .2s ease-in-out;
+                transition: -webkit-transform 4s ease-in-out, -webkit-filter .2s ease-in-out, opacity .2s ease-in-out;
                 opacity: 1;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -319,17 +315,16 @@ header {
                 left: 30px;
                 padding-left: 15px;
                 transition: border-left .2s ease-in-out;
-                -webkit-transition: border-left .2s ease-in-out;
                 border-left: 2px solid transparent;
                 .item-title {
                     position: relative;
                     z-index: 2;
                     display: block;
                     width: 100%;
-                    -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
+                    transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
                     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-                    -webkit-transform: translate3d(0,20px,0)
-                    transform: translate3d(0,20px,0)
+                    -webkit-transform: translate3d(0,20px,0);
+                    transform: translate3d(0,20px,0);
                     opacity: 0;
                     color: $gray;
                     will-change: transform, opacity;
@@ -340,7 +335,7 @@ header {
                     z-index: 2;
                     display: block;
                     width: 100%;
-                    -webkit-transition: -webkit-transform .2s ease-in-out, opacity .1s ease-in-out;
+                    transition: -webkit-transform .2s ease-in-out, opacity .1s ease-in-out;
                     transition: transform .2s ease-in-out, opacity .1s ease-in-out;
                     -webkit-transform: translate3d(0,15px,0);
                     transform: translate3d(0,15px,0);
@@ -359,14 +354,14 @@ header {
                 .item-texts {
                     border-left: 2px solid $primary;
                     .item-title {
-                        -webkit-transform: translate3d(0,0,0)
-                        transform: translate3d(0,0,0)
-                        opacity: 1;
+                        -webkit-transform: translate3d(0,0,0);
+                        transform: translate3d(0,0,0);
+                        opacity: 1
                     }
                     .item-sub {
-                        -webkit-transform: translate3d(0,0,0)
-                        transform: translate3d(0,0,0)
-                        opacity: .7;
+                        -webkit-transform: translate3d(0,0,0);
+                        transform: translate3d(0,0,0);
+                        opacity: .7
                     }
                 }
             }
@@ -423,7 +418,7 @@ footer {
     overflow: hidden;
     width: 100%;
     height: 0;
-    -webkit-transition: -webkit-transform .3s ease-in-out, opacity .2s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out, opacity .2s ease-in-out;
     transition: transform .3s ease-in-out, opacity .2s ease-in-out;
     -webkit-transform: scale(1.2) translate3d(0,0,0);
     transform: scale(1.2) translate3d(0,0,0);
@@ -454,7 +449,6 @@ footer {
             color: $darkgray;
             .fa {
                 cursor: pointer;
-                -webkit-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 color: $primary;
                 -webkit-transform: scale(1) translate3d(0,0,0);
@@ -494,7 +488,6 @@ footer {
             padding-top: 13px;
         }
         button {
-            -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
             color: white;
             border-color: $primary;
