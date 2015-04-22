@@ -44,140 +44,189 @@ background-color .1s ease-in-out;
 /* Base stuff
 ===============*/
 
-html {
+html
+{
     position: relative;
+
     min-height: 100%;
 }
 
-body {
+body
+{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+
     margin-bottom: 242px;
-    background-color: white;
     padding-top: 99px;
+
+    background-color: white;
+
     -webkit-font-kerning: kerned;
     -webkit-font-smoothing: antialiased;
 }
 
-*::-moz-selection {
+*::-moz-selection
+{
     background-color: lighten($primary, 35%);
 }
 
-*::selection {
+*::selection
+{
     background-color: lighten($primary, 35%);
 }
 /* Common
 ===============*/
 
-a {
+a
+{
     text-decoration: none;
+
     color: $primary;
-    &:hover {
+    &:hover
+    {
         text-decoration: none;
+
         color: $primary-hover;
     }
 }
 
-p {
+p
+{
     color: #585858;
 }
 /* Type
 ===========*/
 
-small {
+small
+{
     font-size: $font-small;
 }
 
-.title {
+.title
+{
     margin-bottom: 15px;
+
     color: $darkgray;
 }
 /* Header
 ===============*/
 
-header {
+header
+{
     display: block;
+
     width: 100%;
     margin-bottom: 0;
-    nav.ipub-navbar {
+    nav.ipub-navbar
+    {
         /* position absolute for performance */
-
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
-        z-index: 1;
         /* end position */
 
         overflow: hidden;
+
         width: 100%;
+
         background-color: $gray;
+
         -webkit-perspective: 250px;
-        perspective: 250px;
-        a.brand {
+                perspective: 250px;
+        a.brand
+        {
             display: block;
+
             padding: 36px 0;
+
             transition: $transition;
+
             color: $primary;
-            &:hover {
+            &:hover
+            {
                 color: $primary-hover;
             }
         }
-        .transform-icon {
+        .transform-icon
+        {
             float: right;
+
             padding: 48px 0;
         }
-        ul.navigation {
+        ul.navigation
+        {
             display: block;
             float: right;
+
             margin: 0;
             padding: 0;
+
             list-style: none;
-            @media (max-width: 991px) {
+            @media (max-width: 991px)
+            {
                 display: block !important;
                 float: none;
                 clear: both;
                 overflow: hidden;
+
                 max-height: 0;
                 margin: 0 -100%;
-                transition: -webkit-transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
-                transition: transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
 
+                transition: -webkit-transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
+                transition:         transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
                 -webkit-transform: translate3d(-30px, -30px, 0px);
-                transform: translate3d(-30px, -30px, 0px);
+                        transform: translate3d(-30px, -30px, 0px);
 
                 opacity: 0;
                 background: lighten($mediumgray, 5%);
+
                 will-change: transform, max-height, opacity;
-                &.open {
+                &.open
+                {
                     -webkit-transform: translate3d(0px,-0px, 0px);
-                    transform: translate3d(0px,-0px, 0px);
+                            transform: translate3d(0px,-0px, 0px);
+
                     opacity: 1;
                 }
             }
-            li {
+            li
+            {
                 display: inline-block;
+
                 margin: 0;
                 padding: 0;
-                @media (max-width: 991px) {
+                @media (max-width: 991px)
+                {
                     width: 100%;
                 }
-                a {
+                a
+                {
                     font-size: $font-small;
                     font-weight: $normal;
+
                     display: block;
+
                     margin: 0;
                     padding: 40px 25px;
+
                     transition: $transition;
+
                     color: $primary;
-                    @media (max-width: 991px) {
+                    @media (max-width: 991px)
+                    {
                         padding: 22px 15px;
+
                         text-align: center;
                     }
-                    &:hover {
+                    &:hover
+                    {
                         text-decoration: none;
+
                         color: $primary-hover;
-                        @media (max-width: 991px) {
+                        @media (max-width: 991px)
+                        {
                             background-color: $mediumgray;
                         }
                     }
@@ -189,55 +238,69 @@ header {
 /* Slider
 ===========*/
 
-.slider {
+.slider
+{
     min-height: 700px;
     margin-bottom: $spacing;
+
     background: $primary;
     /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA5Njg4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNTk5ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
     /* FF3.6+ */
     /* Chrome,Safari4+ */
     /* Chrome10+,Safari5.1+ */
     /* Opera 11.10+ */
     /* IE10+ */
-
     background: linear-gradient(135deg, $primary 0%, darken($primary, 20%) 100%);
     /* W3C */
 
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='darken($primary,20%)', GradientType=1);
     /* IE6-8 fallback on horizontal gradient */
-
-    @media (max-width: 991px) {
+    @media (max-width: 991px)
+    {
         min-height: 400px;
     }
-    h1 {
+    h1
+    {
         font-size: 60px;
         font-weight: 700;
+
         margin-top: 210px;
+
         color: $gray;
-        @media (max-width: 991px) {
+        @media (max-width: 991px)
+        {
             font-size: 36px;
+
             margin-top: 80px;
         }
     }
-    h3 {
+    h3
+    {
         font-size: 34px;
+
         margin-bottom: 31px;
+
         color: $gray;
-        @media (max-width: 991px) {
+        @media (max-width: 991px)
+        {
             font-size: 22px;
         }
     }
-    span {
+    span
+    {
         font-style: italic;
+
         letter-spacing: 2px;
         text-transform: uppercase;
+
         opacity: .3;
         color: $gray;
-        @media (max-width: 991px) {
+        @media (max-width: 991px)
+        {
             font-size: 80%;
+
             display: none;
         }
     }
@@ -245,17 +308,21 @@ header {
 /* Header button
 ==================== */
 
-.header-btn {
+.header-btn
+{
     margin-top: -58px;
     padding: 17px 25px 16px 25px;
+
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
     letter-spacing: 5px;
     text-transform: uppercase;
+
     color: $primary;
     border: none;
     border-radius: 300px;
     background-color: $gray;
-    &:hover {
+    &:hover
+    {
         color: $primary-hover;
         background-color: $gray;
         background-color: darken($gray, 1%);
@@ -264,13 +331,17 @@ header {
 /* Recent Work Header
 =======================*/
 
-.recent-work-header {
+.recent-work-header
+{
     margin-top: 50px;
     margin-bottom: 30px;
     padding-bottom: 20px;
+
     border-bottom: 1px solid #eee;
-    span {
+    span
+    {
         text-transform: uppercase;
+
         opacity: .5;
         color: darken($darkgray, 15%);
     }
@@ -278,90 +349,128 @@ header {
 /* Recent Work
 ===============*/
 
-.port-items {
-    .grid {
+.port-items
+{
+    .grid
+    {
         padding: 0;
-        .item-link {
+        .item-link
+        {
             position: relative;
+
             display: block;
             overflow: hidden;
+
             width: 100%;
             height: 300px;
             padding: 30px;
+
             background-color: #000;
-            .item-image {
+            .item-image
+            {
                 position: absolute;
                 z-index: 1;
                 top: 0;
                 left: 0;
+
                 display: block;
+
                 width: 100%;
                 height: 100%;
+
                 transition: -webkit-transform 4s ease-in-out, -webkit-filter .2s ease-in-out, opacity .2s ease-in-out;
+                -webkit-transform: scale(1) translate3d(0,0,0);
+                        transform: scale(1) translate3d(0,0,0);
+
+                opacity: 1;
                 opacity: 1;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
+
                 -webkit-filter: grayscale(0%);
-                -webkit-transform: scale(1) translate3d(0,0,0);
-                transform: scale(1) translate3d(0,0,0);
                 will-change: transform, opacity, -webkit-filter;
-                opacity: 1;
             }
-            .item-texts {
+            .item-texts
+            {
                 position: absolute;
                 z-index: 10;
                 bottom: 30px;
                 left: 30px;
+
                 padding-left: 15px;
+
                 transition: border-left .2s ease-in-out;
+
                 border-left: 2px solid transparent;
-                .item-title {
+                .item-title
+                {
                     position: relative;
                     z-index: 2;
+
                     display: block;
+
                     width: 100%;
+
                     transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-                    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+                    transition:         transform .2s ease-in-out, opacity .2s ease-in-out;
                     -webkit-transform: translate3d(0,20px,0);
-                    transform: translate3d(0,20px,0);
+                            transform: translate3d(0,20px,0);
+
                     opacity: 0;
                     color: $gray;
+
                     will-change: transform, opacity;
                 }
-                .item-sub {
+                .item-sub
+                {
                     font-size: $font-small;
+
                     position: relative;
                     z-index: 2;
+
                     display: block;
+
                     width: 100%;
+
                     transition: -webkit-transform .2s ease-in-out, opacity .1s ease-in-out;
-                    transition: transform .2s ease-in-out, opacity .1s ease-in-out;
+                    transition:         transform .2s ease-in-out, opacity .1s ease-in-out;
                     -webkit-transform: translate3d(0,15px,0);
-                    transform: translate3d(0,15px,0);
+                            transform: translate3d(0,15px,0);
+
                     opacity: 0;
                     color: $gray;
+
                     will-change: transform, opacity;
                 }
             }
-            &:hover {
-                .item-image {
+            &:hover
+            {
+                .item-image
+                {
                     -webkit-transform: scale(1.2) translate3d(0,0,0);
-                    transform: scale(1.2) translate3d(0,0,0);
+                            transform: scale(1.2) translate3d(0,0,0);
+
                     opacity: .3;
+
                     -webkit-filter: grayscale(100%);
                 }
-                .item-texts {
+                .item-texts
+                {
                     border-left: 2px solid $primary;
-                    .item-title {
+                    .item-title
+                    {
                         -webkit-transform: translate3d(0,0,0);
-                        transform: translate3d(0,0,0);
-                        opacity: 1
+                                transform: translate3d(0,0,0);
+
+                        opacity: 1;
                     }
-                    .item-sub {
+                    .item-sub
+                    {
                         -webkit-transform: translate3d(0,0,0);
-                        transform: translate3d(0,0,0);
-                        opacity: .7
+                                transform: translate3d(0,0,0);
+
+                        opacity: .7;
                     }
                 }
             }
@@ -371,26 +480,36 @@ header {
 /* Footer
 ===========*/
 
-footer {
+footer
+{
     position: absolute;
     bottom: 0;
+
     width: 100%;
     height: auto;
     padding: 50px 0;
+
     background-color: $gray;
-    ul {
+    ul
+    {
         padding: 0;
-        li {
+        li
+        {
             list-style: none;
-            a {
+            a
+            {
                 font-size: $font-small;
+
                 color: $primary;
             }
         }
-        &.social {
-            li {
+        &.social
+        {
+            li
+            {
                 margin-right: 30px;
-                a {
+                a
+                {
                     font-size: $font-large;
                 }
             }
@@ -404,96 +523,128 @@ footer {
 /* Portfolio Items
 ===========================*/
 
-.portfolio-img {
+.portfolio-img
+{
     border-radius: $radius;
 }
 /* Modal for contact
 ===========================*/
 
-.custom-modal {
+.custom-modal
+{
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
+
     overflow: hidden;
+
     width: 100%;
     height: 0;
+
     transition: -webkit-transform .3s ease-in-out, opacity .2s ease-in-out;
-    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+    transition:         transform .3s ease-in-out, opacity .2s ease-in-out;
     -webkit-transform: scale(1.2) translate3d(0,0,0);
-    transform: scale(1.2) translate3d(0,0,0);
+            transform: scale(1.2) translate3d(0,0,0);
+
     opacity: 0;
     background-color: rgba(0, 0, 0, .5);
-    &.open {
+    &.open
+    {
         height: 100%;
+
         -webkit-transform: scale(1) translate3d(0,0,0);
-        transform: scale(1) translate3d(0,0,0);
+                transform: scale(1) translate3d(0,0,0);
+
         opacity: 1;
     }
-    &.fade-out {
+    &.fade-out
+    {
         -webkit-transform: scale(1.2) translate3d(0,0,0);
-        transform: scale(1.2) translate3d(0,0,0);
+                transform: scale(1.2) translate3d(0,0,0);
+
         opacity: 0;
     }
-    .modal-body {
+    .modal-body
+    {
         margin-top: 15%;
         padding: 40px;
+
         border-radius: $radius;
         background-color: $gray;
-        @media(max-width: 767px) {
+        @media(max-width: 767px)
+        {
             padding: 20px;
         }
-        h3 {
+        h3
+        {
             margin-top: 0;
             margin-bottom: 20px;
+
             color: $darkgray;
-            .fa {
+            .fa
+            {
                 cursor: pointer;
                 transition: all .2s ease-in-out;
-                color: $primary;
                 -webkit-transform: scale(1) translate3d(0,0,0);
-                transform: scale(1) translate3d(0,0,0);
-                &:hover {
+                        transform: scale(1) translate3d(0,0,0);
+
+                color: $primary;
+                &:hover
+                {
                     -webkit-transform: scale(1.1) translate3d(0,0,0);
-                    transform: scale(1.1) translate3d(0,0,0);
+                            transform: scale(1.1) translate3d(0,0,0);
+
                     color: $primary-hover;
                 }
             }
         }
-        hr {
+        hr
+        {
             width: 50%;
+
             border-color: $primary;
         }
-        label {
+        label
+        {
             font-size: 15px;
             font-weight: $normal;
         }
         input,
-        textarea {
+        textarea
+        {
             height: 50px;
+
             border-radius: $radius;
             box-shadow: none;
-            &:focus {
+            &:focus
+            {
                 border-color: $primary;
             }
-            &.error {
-                border-color: #E74C3C;
+            &.error
+            {
+                border-color: #e74c3c;
             }
-            &.success {
-                border-color: #2ECC71;
+            &.success
+            {
+                border-color: #2ecc71;
             }
         }
-        textarea {
+        textarea
+        {
             height: 190px;
             padding-top: 13px;
         }
-        button {
+        button
+        {
             transition: all .2s ease-in-out;
+
             color: white;
             border-color: $primary;
             border-radius: $radius;
             background-color: $primary;
-            &:hover {
+            &:hover
+            {
                 border-color: $primary-hover;
                 background-color: $primary-hover;
             }
