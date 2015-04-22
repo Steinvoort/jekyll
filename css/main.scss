@@ -68,6 +68,8 @@ body
 
     background-color: white;
 
+    padding-top: 99px;
+
     -webkit-font-kerning: kerned;
     -webkit-font-smoothing: antialiased;
 }
@@ -129,6 +131,9 @@ header
     margin-bottom: 0;
     nav.ipub-navbar
     {
+        position: absolute;
+        top: 0;
+        left: 0;
         overflow: hidden;
 
         width: 100%;
