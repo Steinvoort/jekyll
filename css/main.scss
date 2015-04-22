@@ -167,6 +167,7 @@ header
             padding: 0;
 
             list-style: none;
+            will-change: transform;
             @media (max-width: 991px)
             {
                 display: block !important;
@@ -185,6 +186,7 @@ header
 
                 opacity: 0;
                 background: lighten($mediumgray, 5%);
+                will-change: transform, max-height;
                 &.open
                 {
                     -webkit-transform: rotateX(0deg) translateY(0px);
@@ -386,6 +388,7 @@ header
                 background-size: cover;
 
                 -webkit-filter: grayscale(0%);
+                will-change: transform;
             }
             .item-texts
             {
@@ -416,6 +419,7 @@ header
 
                     opacity: 0;
                     color: $gray;
+                    will-change: transform, opacity;
                 }
                 .item-sub
                 {
@@ -436,6 +440,7 @@ header
 
                     opacity: 0;
                     color: $gray;
+                    will-change: transform, opacity;
                 }
             }
             &:hover
