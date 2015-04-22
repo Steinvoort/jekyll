@@ -4,10 +4,10 @@
 
 /* Import stuff
 ======================*/
-
 @charset 'utf-8';
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 /*
 ===============================================================================
 ===============================================================================
@@ -22,28 +22,35 @@
 ===============================================================================
 
 */
+
 /* Variables
 ===============*/
 
 $primary: #2196f3;
 $primary-hover: darken($primary, 15%);
+
 $secondairy: #111;
 $secondairy-hover: lighten($secondairy, 15%);
+
 $gray: #f8f8f8;
 $mediumgray: darken($gray, 10%);
 $darkgray: darken($gray, 25%);
+
 $radius: 2px;
 $spacing: 30px;
+
 $normal: 400;
 $bold: 700;
+
 $font-small: 15px;
 $font-normal: 19px;
 $font-large: 23px;
-$transition: color .1s ease-in-out,
-background-color .1s ease-in-out;
+
+$transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+
 /* Base stuff
 ===============*/
-
 html
 {
     position: relative;
@@ -58,9 +65,10 @@ body
     line-height: 1.5;
 
     margin-bottom: 242px;
-    padding-top: 99px;
 
     background-color: white;
+
+    padding-top: 99px;
 
     -webkit-font-kerning: kerned;
     -webkit-font-smoothing: antialiased;
@@ -75,6 +83,7 @@ body
 {
     background-color: lighten($primary, 35%);
 }
+
 /* Common
 ===============*/
 
@@ -95,9 +104,9 @@ p
 {
     color: #585858;
 }
+
 /* Type
 ===========*/
-
 small
 {
     font-size: $font-small;
@@ -109,6 +118,8 @@ small
 
     color: $darkgray;
 }
+
+
 /* Header
 ===============*/
 
@@ -122,11 +133,10 @@ header
     {
         /* position absolute for performance */
         position: absolute;
-        z-index: 1;
         top: 0;
         left: 0;
+        z-index: 1;
         /* end position */
-
         overflow: hidden;
 
         width: 100%;
@@ -134,6 +144,7 @@ header
         background-color: $gray;
 
         -webkit-perspective: 250px;
+
                 perspective: 250px;
         a.brand
         {
@@ -175,18 +186,18 @@ header
                 margin: 0 -100%;
 
                 transition: -webkit-transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
-                transition:         transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
-                -webkit-transform: translate3d(-30px, -30px, 0px);
-                        transform: translate3d(-30px, -30px, 0px);
+
+                transition: transform .3s ease-in-out, opacity .4s ease-in-out, max-height .3s ease-in-out;
+                -webkit-transform: rotateX(-30deg) translateY(-30px) translateZ(0px);
+                        transform: rotateX(-30deg) translateY(-30px) translateZ(0px);
 
                 opacity: 0;
                 background: lighten($mediumgray, 5%);
-
                 will-change: transform, max-height, opacity;
                 &.open
                 {
-                    -webkit-transform: translate3d(0px,-0px, 0px);
-                            transform: translate3d(0px,-0px, 0px);
+                    -webkit-transform: rotateX(0deg) translateY(0px) translateZ(0px);
+                            transform: rotateX(0deg) translateY(0px) translateZ(0px);
 
                     opacity: 1;
                 }
@@ -235,6 +246,7 @@ header
         }
     }
 }
+
 /* Slider
 ===========*/
 
@@ -243,21 +255,13 @@ header
     min-height: 700px;
     margin-bottom: $spacing;
 
-    background: $primary;
-    /* Old browsers */
+    background: $primary; /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA5Njg4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNTk5ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    /* FF3.6+ */
-    /* Chrome,Safari4+ */
-    /* Chrome10+,Safari5.1+ */
-    /* Opera 11.10+ */
-    /* IE10+ */
-    background: linear-gradient(135deg, $primary 0%, darken($primary, 20%) 100%);
-    /* W3C */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA5Njg4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNTk5ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+    background:         linear-gradient(135deg,  $primary 0%,darken($primary,20%) 100%); /* W3C */
 
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='darken($primary,20%)', GradientType=1);
-    /* IE6-8 fallback on horizontal gradient */
-    @media (max-width: 991px)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='darken($primary,20%)',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    @media (max-width: 991px )
     {
         min-height: 400px;
     }
@@ -305,6 +309,7 @@ header
         }
     }
 }
+
 /* Header button
 ==================== */
 
@@ -328,6 +333,7 @@ header
         background-color: darken($gray, 1%);
     }
 }
+
 /* Recent Work Header
 =======================*/
 
@@ -346,8 +352,11 @@ header
         color: darken($darkgray, 15%);
     }
 }
+
 /* Recent Work
 ===============*/
+
+
 
 .port-items
 {
@@ -379,17 +388,14 @@ header
                 height: 100%;
 
                 transition: -webkit-transform 4s ease-in-out, -webkit-filter .2s ease-in-out, opacity .2s ease-in-out;
-                -webkit-transform: scale(1) translate3d(0,0,0);
-                        transform: scale(1) translate3d(0,0,0);
 
-                opacity: 1;
                 opacity: 1;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
 
                 -webkit-filter: grayscale(0%);
-                will-change: transform, opacity, -webkit-filter;
+                will-change: transform;
             }
             .item-texts
             {
@@ -413,13 +419,13 @@ header
                     width: 100%;
 
                     transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-                    transition:         transform .2s ease-in-out, opacity .2s ease-in-out;
-                    -webkit-transform: translate3d(0,20px,0);
-                            transform: translate3d(0,20px,0);
+
+                    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+                    -webkit-transform: translateY(20px);
+                            transform: translateY(20px);
 
                     opacity: 0;
                     color: $gray;
-
                     will-change: transform, opacity;
                 }
                 .item-sub
@@ -434,13 +440,13 @@ header
                     width: 100%;
 
                     transition: -webkit-transform .2s ease-in-out, opacity .1s ease-in-out;
-                    transition:         transform .2s ease-in-out, opacity .1s ease-in-out;
-                    -webkit-transform: translate3d(0,15px,0);
-                            transform: translate3d(0,15px,0);
+
+                    transition: transform .2s ease-in-out, opacity .1s ease-in-out;
+                    -webkit-transform: translateY(15px);
+                            transform: translateY(15px);
 
                     opacity: 0;
                     color: $gray;
-
                     will-change: transform, opacity;
                 }
             }
@@ -448,8 +454,8 @@ header
             {
                 .item-image
                 {
-                    -webkit-transform: scale(1.2) translate3d(0,0,0);
-                            transform: scale(1.2) translate3d(0,0,0);
+                    -webkit-transform: scale(1.2);
+                            transform: scale(1.2);
 
                     opacity: .3;
 
@@ -460,15 +466,15 @@ header
                     border-left: 2px solid $primary;
                     .item-title
                     {
-                        -webkit-transform: translate3d(0,0,0);
-                                transform: translate3d(0,0,0);
+                        -webkit-transform: translateY(0px);
+                                transform: translateY(0px);
 
                         opacity: 1;
                     }
                     .item-sub
                     {
-                        -webkit-transform: translate3d(0,0,0);
-                                transform: translate3d(0,0,0);
+                        -webkit-transform: translateY(0px);
+                                transform: translateY(0px);
 
                         opacity: .7;
                     }
@@ -477,6 +483,8 @@ header
         }
     }
 }
+
+
 /* Footer
 ===========*/
 
@@ -516,17 +524,18 @@ footer
         }
     }
 }
+
 /* Import transformicons
 ===============================*/
-
 @import 'transformicons';
+
 /* Portfolio Items
 ===========================*/
-
 .portfolio-img
 {
     border-radius: $radius;
 }
+
 /* Modal for contact
 ===========================*/
 
@@ -543,25 +552,27 @@ footer
     height: 0;
 
     transition: -webkit-transform .3s ease-in-out, opacity .2s ease-in-out;
-    transition:         transform .3s ease-in-out, opacity .2s ease-in-out;
-    -webkit-transform: scale(1.2) translate3d(0,0,0);
-            transform: scale(1.2) translate3d(0,0,0);
+
+    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
 
     opacity: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0,0,0, .5);
     &.open
     {
         height: 100%;
 
-        -webkit-transform: scale(1) translate3d(0,0,0);
-                transform: scale(1) translate3d(0,0,0);
+        -webkit-transform: scale(1);
+
+                transform: scale(1);
 
         opacity: 1;
     }
     &.fade-out
     {
-        -webkit-transform: scale(1.2) translate3d(0,0,0);
-                transform: scale(1.2) translate3d(0,0,0);
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
 
         opacity: 0;
     }
@@ -572,8 +583,7 @@ footer
 
         border-radius: $radius;
         background-color: $gray;
-        @media(max-width: 767px)
-        {
+        @media(max-width: 767px) {
             padding: 20px;
         }
         h3
@@ -586,14 +596,12 @@ footer
             {
                 cursor: pointer;
                 transition: all .2s ease-in-out;
-                -webkit-transform: scale(1) translate3d(0,0,0);
-                        transform: scale(1) translate3d(0,0,0);
 
                 color: $primary;
                 &:hover
                 {
-                    -webkit-transform: scale(1.1) translate3d(0,0,0);
-                            transform: scale(1.1) translate3d(0,0,0);
+                    -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
 
                     color: $primary-hover;
                 }
@@ -621,13 +629,11 @@ footer
             {
                 border-color: $primary;
             }
-            &.error
-            {
-                border-color: #e74c3c;
+            &.error {
+                border-color: #E74C3C;
             }
-            &.success
-            {
-                border-color: #2ecc71;
+            &.success {
+                border-color: #2ECC71;
             }
         }
         textarea
