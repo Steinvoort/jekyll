@@ -25,21 +25,27 @@
 ===============*/
 
 $primary: #2196f3;
-$primary-hover: darken($primary, 15%);
+    $primary-hover: darken($primary, 15%);
+
 $secondairy: #111;
-$secondairy-hover: lighten($secondairy, 15%);
+    $secondairy-hover: lighten($secondairy, 15%);
+
 $gray: #f8f8f8;
-$mediumgray: darken($gray, 10%);
-$darkgray: darken($gray, 25%);
+    $mediumgray: darken($gray, 10%);
+    $darkgray: darken($gray, 25%);
+
 $radius: 2px;
 $spacing: 30px;
+
 $normal: 400;
 $bold: 700;
+
 $font-small: 15px;
 $font-normal: 19px;
 $font-large: 23px;
-$transition: color .1s ease-in-out,
-background-color .1s ease-in-out;
+
+$transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
 /* Base stuff
 ===============*/
 
