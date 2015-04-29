@@ -445,6 +445,8 @@ footer {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
+        overflow-y: scroll;
+        padding-bottom: 100px;
     }
     &.fade-out {
         opacity: 0;
