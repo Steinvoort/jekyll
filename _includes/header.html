@@ -12,9 +12,11 @@
                         </button>
 
                         <ul class="navigation hidden-sm hidden-xs">
-                            {% for page in site.pages %}
-                                {% if page.title %}
-                                    <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+
+                            <!-- Voor elke pagina in _posts/staticpages -->
+                            {% for post in site.posts %}
+                                {% if post.categorie == "static" %}
+                                    <li><a class="page-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
                                 {% endif %}
                             {% endfor %}
                             <li><a href="" id="open-modal-tag"><i class="fa fa-paper-plane"></i></a></li>

@@ -10,8 +10,10 @@
                 <div class="col-sm-3">
                     <ul>
                         <small>Pages</small>
-                        {% for page in site.pages %}
-                            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                        {% for post in site.posts %}
+                            {% if post.categorie == "static" %}
+                                <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

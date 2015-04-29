@@ -1,14 +1,9 @@
 ---
-layout: portfolio
-title:  "Arthur XIV"
-subtag: "Where Is Dem Princess?"
-image:
-    - "arthur1.jpg"
-    - "arthur2.jpg"
-    - "arthur3.jpg"
-date:   2015-04-14
-categories: portfolio
-permalink: /projects/arthur-xiv/
+layout: page
+title: Bootstrap
+permalink: /bootstrap/
+categorie: static
+permalink: /bootstrap/
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
