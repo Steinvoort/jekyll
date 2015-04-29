@@ -1,0 +1,14 @@
+---
+layout: home
+sitetitel: "Hoi, ik ben een template"
+siteondertitel: "Je kunt me editten via Prose.io"
+sitequote: "Gebouwd met Bootstrap & Jekyll"
+sitebutton: "UXD / Front-end"
+---
+
+{% for post in site.posts %}
+    {% if post.categorie == "home" %}
+        {{ post.content }}
+    {% endif %}
+{% endfor %}
+
