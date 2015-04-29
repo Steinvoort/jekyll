@@ -32,3 +32,14 @@ prose:
     - .gitignore
     - Gemfile
     - Gemfile.lock
+  projects/_posts:
+    - name: "title"
+      field:
+        element: "text"
+        label: "titel"
+        placeholder: "Voer een titel in"
+    - name: "subtag"
+      field:
+        element: "text"
+        label: "subtag"
+        placeholder: "Voer een subtag in"
