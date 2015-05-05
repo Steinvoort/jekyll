@@ -1,7 +1,7 @@
 # Site settings
-title: iPublications Jekyll Template
-email: info@ipublications.net
-description: iPublications Jekyll Template
+title: Baasdesign Jekyll Template
+email: info@baasdesign.nl
+description: Baasdesign Jekyll Template
 # for live
 baseurl: "/jekyll"
 siteurl: "http://baasdesign.github.io/"
@@ -10,15 +10,16 @@ siteurl: "http://baasdesign.github.io/"
 # baseurl: ""
 # siteurl: "localhost:4000"
 
-twitter_username: ipublications
-github_username:  ipublications
+twitter_username: baasdesign
+github_username:  baasdesign
 
 # Build settings #
 markdown: kramdown
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://prose.github.io/jekyll/'
+  siteurl: 'http://baasdesign.github.io/jekyll/'
+  relativeLinks: 'http://baasdesign.github.io/jekyll/links.jsonp'
   media: 'assets/images/'
   ignore:
     - _config.yml
