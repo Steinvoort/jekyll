@@ -3,8 +3,8 @@ title: Baasdesign Jekyll Template
 email: info@baasdesign.nl
 description: Baasdesign Jekyll Template
 # for live
-baseurl: "/jekyll"
-siteurl: "http://baasdesign.github.io/"
+baseurl: ""
+siteurl: "http://chartreuse-goat1.cloudvent.net/"
 
 #for local
 # baseurl: ""
