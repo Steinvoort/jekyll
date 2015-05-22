@@ -4,7 +4,7 @@ email: info@baasdesign.nl
 description: Baasdesign Jekyll Template
 # for live
 baseurl: ""
-siteurl: "http://chartreuse-goat1.cloudvent.net/"
+siteurl: "baasdesign.github.io/jekyll"
 
 #for local
 # baseurl: ""
