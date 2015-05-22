@@ -4,7 +4,7 @@ email: info@baasdesign.nl
 description: Baasdesign Jekyll Template
 # for live
 baseurl: "/jekyll"
-siteurl: "baasdesign.github.io/jekyll"
+siteurl: "steinvoort.github.io/jekyll"
 
 #for local
 # baseurl: ""
