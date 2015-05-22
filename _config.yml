@@ -1,6 +1,6 @@
 # Site settings
-title: Baasdesign Jekyll Template
-email: info@baasdesign.nl
+title: Steinvoort.net
+email: mark@steinvoort.net
 description: Baasdesign Jekyll Template
 # for live
 baseurl: "/jekyll"
@@ -11,7 +11,7 @@ siteurl: "steinvoort.github.io/jekyll"
 # siteurl: "localhost:4000"
 
 twitter_username: baasdesign
-github_username:  baasdesign
+github_username:  Steinvoort
 
 # Build settings #
 markdown: kramdown
